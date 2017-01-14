@@ -76,5 +76,5 @@ app.use(controller());
 // 在端口3000监听:
 //listen是对http.creatServer的封装
 //可在多个端口启动app如同时支持http https
-app.listen(4000);
-console.log('app started at port 5000...');
+app.listen(process.env.PORT||5000);
+console.log('app started at port '+process.env.PORT);

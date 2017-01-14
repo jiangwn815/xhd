@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>新航道澳洲学校官网-新航道喊你去澳洲游学啦!</title>
+    <link rel="shortcut icon" href="/static/xhd/favicon.ico">
+    <link href="/static/css/bootstrap-flex.css" rel="stylesheet">
+    <link href="/static/css/font-awesome.css" rel="stylesheet">
+    <style>
+        #bg{
+            background: url(/static/xhd/bg2.png) center no-repeat;
+            background-size: cover;
+            margin-bottom: 1rem; 
+        }
+        #registry{
+            margin-left: 30%;
+        }
+        .quote-header{
+            color:#677077;
+        }
+        blockquote.bquote{
+          font-size: 1rem;
+          color:#788089;
+        }
+        div.media{
+          padding: 5% 10%;
+        }
+        i{
+          margin-right: 1rem;
+        }
+        a.carousel-control{
+            opacity: 0;
+        }
+        div.media.four-factors,.four-factors>div.media{
+            padding: 0;
+            margin-bottom: 1rem;
+            
+        }
+        div.media.four-factors{
+            margin-top: 0.75rem;
+        }
+        #factor1{
+            background: url("/static/xhd/icon.png");
+            background-position: 0 -28px;
+            width: 64px;
+            height: 64px;
+            transform: scale(0.75,0.75);
+        }
+        #factor2{
+            background: url("/static/xhd/icon.png");
+            background-position: 0 -101px;
+            width: 64px;
+            height: 64px;
+            transform: scale(0.75,0.75);
+        }
+        #factor3{
+            background: url("/static/xhd/icon.png");
+            background-position: 0 -174px;
+            width: 64px;
+            height: 64px;
+            transform: scale(0.75,0.75);
+        }
+        #factor4{
+            background: url("/static/xhd/icon.png");
+            background-position: 0 -247px;
+            width: 64px;
+            height: 64px;
+            transform: scale(0.75,0.75);
+        }
+        div.media>div.media{
+            max-width: 48%;
+        }
+        #advantage{
+            padding-bottom: 3rem;
+        }
+        #itinerary>h4,#itinerary-business>h4,#features>h4,#qa>h4{
+            margin: 1rem auto;
+            text-align: center;
+            vertical-align: middle;
+            color: #677077;          
+        }
+        #itinerary{ background: url("/static/xhd/bg2.jpg") no-repeat center; }
+        #itinerary-business{ background: url("/static/xhd/bg3.jpg") no-repeat center; }
+        #itinerary,#itinerary-business,#features,#qa{
+            border-top: 1px #b8c1c8 solid;
+            padding: 2rem 2rem 0.5rem 2rem;           
+            background-size: cover;            
+        }
+        #itinerary>div,#itinerary-business>div{
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto; 
+        }
+        .card-header>h5{
+            text-align: center;
+            color: #677077;
+            font-size: 80%;
+        }
+        .media.four-factors span{
+            color: #788089;
+        }
+        h5>a:link,h5>a:visited,h5>a:hover{
+            color: #fff;
+            text-decoration: none;
+        }
+        div.card-header{
+            background-color: #49b0e5;
+            opacity: 0.8;
+        }
+        .card-block>ul>li{
+            display: flex;
+            justify-content: space-around;
+        }
+        .card-block>ul>li>span:first-child{
+            flex-basis: 5rem;
+            color: #49b0e5;
+        }
+        .card-block>ul>li>span:last-child{
+            flex-basis: 20rem;
+            color: #677077;
+        }
+        footer{
+            margin-top: 2rem;
+            text-align: center;
+        }
+        #features .card{
+            margin: auto;
+            margin-bottom: 3rem;
+            width: 325px;
+            border: 0px;
+        }
+        #features .card-block{
+            padding: 0;
+            padding-top: 1rem;
+        }
+        #grid{
+            background: url("/static/xhd/bg4.png") no-repeat center;
+            background-size: cover;
+            height: 15rem;
+        }
+    </style>
+    <script src="/static/js/jquery-3.1.1.min.js"></script>
+    <script src="/static/js/tether.min.js"></script>
+    <script src="/static/js/bootstrap4.js"></script>
+    <script src="/static/js/vue.js"></script>
+    <script src="/static/js/jquery.md5.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-light">
+            <a class="navbar-brand" href="#">
+                <img src="/static/xhd/logo.png" height="25rem" alt="">
+            </a>       
+            <ul class="nav navbar-nav float-xs-right">
+                <li class="nav-item active"><a class="nav-link" href="#">培训</a></li>
+                <li class="nav-item active"><a class="nav-link" href="#">游学</a></li>
+                <li class="nav-item active"><a class="nav-link" href="#">留学</a></li>
+                <li class="nav-item dropdown active">
+                <a class="nav-link dropdown-toggle" href="http://example.com" 
+                id="supportedContentDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">更多</a>
+                <div class="dropdown-menu" aria-labelledby="supportedContentDropdown" id="nav-dropdown" style="left:-50%;min-width: 1rem;">
+                    <a class="dropdown-item" href="#">移民</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">房产</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">动态</a>
+                </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <section class="jumbotron jumbotron-fluid" id="bg">
+        <div class="container">
+            <div style="margin-left: 50%;padding-top: 2rem">
+            <h5>新航道喊你去游学啦</h5>
+            <br/>
+            <p class="small">个性化定制，多种选择<br/>新航道澳洲公司全程贴身服务<br/>
+            马术、网球、高尔夫超豪华可选课程配置<br/>给孩子难忘的澳洲假期！</p>
+            <hr class="my-1">
+            <p class="small">咨询热线电话：010-82533761</p>
+            <p class="lead">
+                <a class="btn btn-primary btn-xs" href="#" role="button" id="registry">立即预订</a>
+            </p>
+            </div>
+        </div>
+    </section>
+    <section id="advantage">
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" style="padding-bottom:1rem;">
+            <ol class="carousel-indicators">
+                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="1"></li>               
+            </ol>
+            <div class="carousel-inner" role="listbox">
+                <div class="carousel-item active">
+                    <div class="media flex-items-xs-middle flex-items-xs-center" >
+                        <div style="margin-right:1rem">
+                            <a href="#"><img class="media-object rounded-circle" src="static/xhd/hm.jpg" alt="胡敏" width="64rem"></a>
+                        </div>
+                        <div>
+                            <a href="#"><h4 class="media-heading quote-header">胡敏 教授</h4>
+                            <span style="color:#b8c1c8;">新航道总裁兼校长</span></a>                       
+                        </div>
+                    </div>
+                    <div class="media">
+                        <i class="fa fa-quote-left fa-2x" style="color:#677077"></i>
+                        <blockquote class="bquote">新航道澳洲学校总部设在澳大利亚墨尔本，新航道员工全程随行，随时解决孩子问题，保障出行安全</blockquote>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="media flex-items-xs-middle flex-items-xs-center" >
+                        <div style="margin-right:1rem">
+                            <a href="#"><img class="media-object rounded-circle" src="static/xhd/mjx.jpeg" alt="马婧璇" width="64rem"></a>
+                        </div>
+                        <div  >
+                            <a href="#"><h4 class="media-heading quote-header">马婧璇</h4>
+                            <span style="color:#b8c1c8;">新航道澳洲学校校长</span></a>                        
+                        </div>
+                    </div>
+                    <div class="media">
+                        <i class="fa fa-quote-left fa-2x"></i>
+                        <blockquote class="bquote">新航道澳洲游学线路可选网球、马术和高尔夫球项目，更丰富的游学内容，给孩子一个不一样的寒假</blockquote>
+                    </div>
+                </div>
+                
+            </div>
+            <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                <span class="icon-prev" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                <span class="icon-next" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+        <div class="media four-factors flex-items-xs-center">
+            <div class="media">
+                <a class="media-left media-middle" href="#">
+                    <span class="media-object" id="factor1"></span>
+                </a>
+                <div class="media-body">
+                    <h5 class="media-heading">理念</h4>
+                    <span>以实际需求为前提，量身策划合适产品</span>
+                </div>
+            </div>
+            <div class="media">
+                <a class="media-left media-middle" href="#">
+                    <span class="media-object" id="factor2"></span>
+                </a>
+                <div class="media-body">
+                    <h5 class="media-heading">宗旨</h4>
+                    <span>行程可以复制，品质不可超越</span>
+                </div>
+            </div>
+        </div>
+        <div class="media four-factors flex-items-xs-center">
+            <div class="media">
+                <a class="media-left media-middle" href="#">
+                    <span class="media-object" id="factor3"></span>
+                </a>
+                <div class="media-body">
+                    <h5 class="media-heading">使命</h4>
+                    <span>提供优质服务，帮助孩子成长</span>
+                </div>
+            </div>
+            <div class="media">
+                <a class="media-left media-middle" href="#">
+                    <span class="media-object" id="factor4"></span>
+                </a>
+                <div class="media-body">
+                    <h5 class="media-heading">愿景</h4>
+                    <span>给孩子一个有意义的假期</span>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <section id="itinerary">
+        <h4>游学路线方案选择</h4>
+        <div id="accordion" role="tablist" aria-multiselectable="true">
+            <div class="card">
+                <div class="card-header" role="tab" id="headingOne">
+                <h5 class="mb-0">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    行程安排（基础路线）
+                    </a>
+                </h5>
+                </div>
+
+                <div id="collapseOne" class="collapse in" role="tabpanel" aria-labelledby="headingOne">
+                    <div class="card-block">
+                        <ul class="list-unstyled">
+                            <li>
+                                <span>DAY1</span>
+                                <span>飞往墨尔本，开启游学之旅</span>
+                            </li>
+                            <li>
+                                <span>DAY2</span>
+                                <span>参观墨尔本旧监狱，游览丹顿农山脉国家公园</span>
+                            </li>
+                            <li>
+                                <span>DAY3</span>
+                                <span>淘金镇一日游</span>
+                            </li>
+                            <li>
+                                <span>DAY4</span>
+                                <span>马术体验课</span>
+                            </li>
+                            <li>
+                                <span>DAY5</span>
+                                <span>参观著名大学，漫步圣基达尔海滩</span>
+                            </li>
+                            <li>
+                                <span>DAY6</span>
+                                <span>参观著名大学和世界最大图书馆之一：维多利亚州立图书馆</span>
+                            </li>
+                            <li>
+                                <span>DAY7</span>
+                                <span>抵达悉尼，游览悉尼歌剧院、海港大桥，漫步皇家植物园</span>
+                            </li>
+                            <li>
+                                <span>DAY8</span>
+                                <span>领略博物馆奇妙之旅，赴悉尼水族馆观赏12000种海洋生物</span>
+                            </li>
+                            <li>
+                                <span>DAY9</span>
+                                <span>语言课程开始，墨尔本市区景点游览</span>
+                            </li>
+                            <li>
+                                <span>DAY10</span>
+                                <span>语言课程，墨尔本市区游览</span>
+                            </li>
+                            <li>
+                                <span>DAY11</span>
+                                <span>语言课程，墨尔本市区游览</span>
+                            </li>
+                            <li>
+                                <span>DAY12</span>
+                                <span>语言课程，墨尔本市区游览</span>
+                            </li>
+                            <li>
+                                <span>DAY13</span>
+                                <span>语言课程毕业典礼</span>
+                            </li>
+                            <li>
+                                <span>DAY14</span>
+                                <span>游览绝美大洋路</span>
+                            </li>
+                            <li>
+                                <span>DAY15</span>
+                                <span>游览皇家植物园，维多利亚市场，回国</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" role="tab" id="headingTwo">
+                <h5 class="mb-0">
+                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    网球达人游学线路
+                    </a>
+                </h5>
+                </div>
+                <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo">
+                    <div class="card-block">
+                        <ul class="list-unstyled">
+                            <li>
+                                <span>DAY1</span>
+                                <span>飞往墨尔本，开启游学之旅</span>
+                            </li>
+                            <li>
+                                <span>DAY2</span>
+                                <span>参观澳网比赛场地，变身网球达人</span>
+                            </li>
+                            <li>
+                                <span>DAY3</span>
+                                <span>网球训练，墨尔本市区景点游览</span>
+                            </li>
+                            <li>
+                                <span>DAY4</span>
+                                <span>网球训练，墨尔本市区景点游览</span>
+                            </li>
+                            <li>
+                                <span>DAY5</span>
+                                <span>网球训练，墨尔本市区景点游览</span>
+                            </li>
+                            <li>
+                                <span>DAY6</span>
+                                <span>参观著名大学和世界最大图书馆之一：维多利亚州立图书馆</span>
+                            </li>
+                            <li>
+                                <span>DAY7</span>
+                                <span>抵达悉尼，游览悉尼歌剧院、海港大桥，漫步皇家植物园</span>
+                            </li>
+                            <li>
+                                <span>DAY8</span>
+                                <span>领略博物馆奇妙之旅，赴悉尼水族馆观赏12000种海洋生物</span>
+                            </li>
+                            <li>
+                                <span>DAY9</span>
+                                <span>语言课程开始，墨尔本市区景点游览</span>
+                            </li>
+                            <li>
+                                <span>DAY10</span>
+                                <span>语言课程，墨尔本市区游览</span>
+                            </li>
+                            <li>
+                                <span>DAY11</span>
+                                <span>语言课程，墨尔本市区游览</span>
+                            </li>
+                            <li>
+                                <span>DAY12</span>
+                                <span>语言课程，墨尔本市区游览</span>
+                            </li>
+                            <li>
+                                <span>DAY13</span>
+                                <span>语言课程毕业典礼</span>
+                            </li>
+                            <li>
+                                <span>DAY14</span>
+                                <span>游览绝美大洋路</span>
+                            </li>
+                            <li>
+                                <span>DAY15</span>
+                                <span>游览皇家植物园，维多利亚市场，回国</span>
+                            </li>
+                        </ul>	
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" role="tab" id="headingThree">
+                <h5 class="mb-0">
+                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    马背上的游学线路
+                    </a>
+                </h5>
+                </div>
+                <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree">
+                    <div class="card-block">
+                        <ul class="list-unstyled">
+                            <li>
+                                <span>DAY1</span>
+                                <span>飞往墨尔本，开启游学之旅</span>
+                            </li>
+                            <li>
+                                <span>DAY2</span>
+                                <span>马术学习，墨尔本市区景点游览</span>
+                            </li>
+                            <li>
+                                <span>DAY3</span>
+                                <span>马术学习，墨尔本市区景点游览</span>
+                            </li>
+                            <li>
+                                <span>DAY4</span>
+                                <span>马术学习，墨尔本市区景点游览</span>
+                            </li>
+                            <li>
+                                <span>DAY5</span>
+                                <span>马术学习，墨尔本市区景点游览</span>
+                            </li>
+                            <li>
+                                <span>DAY6</span>
+                                <span>参观著名大学和世界最大图书馆之一：维多利亚州立图书馆</span>
+                            </li>
+                            <li>
+                                <span>DAY7</span>
+                                <span>抵达悉尼，游览悉尼歌剧院、海港大桥，漫步皇家植物园</span>
+                            </li>
+                            <li>
+                                <span>DAY8</span>
+                                <span>领略博物馆奇妙之旅，赴悉尼水族馆观赏12000种海洋生物</span>
+                            </li>
+                            <li>
+                                <span>DAY9</span>
+                                <span>语言课程开始，墨尔本市区景点游览</span>
+                            </li>
+                            <li>
+                                <span>DAY10</span>
+                                <span>语言课程，墨尔本市区游览</span>
+                            </li>
+                            <li>
+                                <span>DAY11</span>
+                                <span>语言课程，墨尔本市区游览</span>
+                            </li>
+                            <li>
+                                <span>DAY12</span>
+                                <span>语言课程，墨尔本市区游览</span>
+                            </li>
+                            <li>
+                                <span>DAY13</span>
+                                <span>语言课程毕业典礼</span>
+                            </li>
+                            <li>
+                                <span>DAY14</span>
+                                <span>游览绝美大洋路</span>
+                            </li>
+                            <li>
+                                <span>DAY15</span>
+                                <span>游览皇家植物园，维多利亚市场，回国</span>
+                            </li>
+                        </ul>	
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" role="tab" id="headingFour">
+                <h5 class="mb-0">
+                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                    商务精英高尔夫游学线路
+                    </a>
+                </h5>
+                </div>
+                <div id="collapseFour" class="collapse" role="tabpanel" aria-labelledby="headingFour">
+                    <div class="card-block">
+                        <ul class="list-unstyled">
+                            <li>
+                                <span>DAY1</span>
+                                <span>飞往墨尔本，开启游学之旅</span>
+                            </li>
+                            <li>
+                                <span>DAY2</span>
+                                <span>高尔夫学习，墨尔本市区景点游览</span>
+                            </li>
+                            <li>
+                                <span>DAY3</span>
+                                <span>高尔夫学习，墨尔本市区景点游览</span>
+                            </li>
+                            <li>
+                                <span>DAY4</span>
+                                <span>高尔夫学习，墨尔本市区景点游览</span>
+                            </li>
+                            <li>
+                                <span>DAY5</span>
+                                <span>高尔夫学习，墨尔本市区景点游览</span>
+                            </li>
+                            <li>
+                                <span>DAY6</span>
+                                <span>参观著名大学和世界最大图书馆之一：维多利亚州立图书馆</span>
+                            </li>
+                            <li>
+                                <span>DAY7</span>
+                                <span>抵达悉尼，游览悉尼歌剧院、海港大桥，漫步皇家植物园</span>
+                            </li>
+                            <li>
+                                <span>DAY8</span>
+                                <span>领略博物馆奇妙之旅，赴悉尼水族馆观赏12000种海洋生物</span>
+                            </li>
+                            <li>
+                                <span>DAY9</span>
+                                <span>语言课程开始，墨尔本市区景点游览</span>
+                            </li>
+                            <li>
+                                <span>DAY10</span>
+                                <span>语言课程，墨尔本市区游览</span>
+                            </li>
+                            <li>
+                                <span>DAY11</span>
+                                <span>语言课程，墨尔本市区游览</span>
+                            </li>
+                            <li>
+                                <span>DAY12</span>
+                                <span>语言课程，墨尔本市区游览</span>
+                            </li>
+                            <li>
+                                <span>DAY13</span>
+                                <span>语言课程毕业典礼</span>
+                            </li>
+                            <li>
+                                <span>DAY14</span>
+                                <span>游览绝美大洋路</span>
+                            </li>
+                            <li>
+                                <span>DAY15</span>
+                                <span>游览皇家植物园，维多利亚市场，回国</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="itinerary-business">
+        <h4>商务定制路线</h4>
+        <div id="accordion2" role="tablist" aria-multiselectable="true">
+            <div class="card">
+                <div class="card-header" role="tab" id="headingOne2">
+                <h5 class="mb-0">
+                    <a data-toggle="collapse" data-parent="#accordion2" href="#collapseOne2" aria-expanded="true" aria-controls="collapseOne2">
+                    澳洲商务团1
+                    </a>
+                </h5>
+                </div>
+
+                <div id="collapseOne2" class="collapse in" role="tabpanel" aria-labelledby="headingOne2">
+                    <div class="card-block">
+                        <ul class="list-unstyled">
+                            <li>
+                                <span>DAY1</span>
+                                <span>飞往墨尔本</span>
+                            </li>
+                            <li>
+                                <span>DAY2</span>
+                                <span>到达墨尔本，入住Crown或者喜来登酒店，调整休息，参观市区</span>
+                            </li>
+                            <li>
+                                <span>DAY3</span>
+                                <span>市区景点：大学参观（墨尔本大学，莫纳什大学等）；市区景点包括尤里卡观景平台、国会大厦、科技馆等，根据客户需求确定</span>
+                            </li>
+                            <li>
+                                <span>DAY4</span>
+                                <span>墨尔本 • 大洋路一日游</span>
+                            </li>
+                            <li>
+                                <span>DAY5</span>
+                                <span>企鹅岛一日游</span>
+                            </li>
+                            <li>
+                                <span>DAY6</span>
+                                <span>维多利亚市场参观，品尝当地美食，当地商场、免税店购买伴手礼</span>
+                            </li>
+                            <li>
+                                <span>DAY7</span>
+                                <span>以房养学讲座，如何规避汇率风险，如何投资澳洲，参观地产项目</span>
+                            </li>
+                            <li>
+                                <span>DAY8</span>
+                                <span>企业参观，了解投资移民政策，提供免费咨询服务</span>
+                            </li>
+                            <li>
+                                <span>DAY9</span>
+                                <span>了解澳洲教育政策及教育资源优势，参观当地中学、大学</span>
+                            </li>
+                            <li>
+                                <span>DAY10</span>
+                                <span>根据时间安排市区景点，返回中国</span>
+                            </li>                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" role="tab" id="headingTwo2">
+                <h5 class="mb-0">
+                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo2" aria-expanded="false" aria-controls="collapseTwo2">
+                    澳洲商务团2
+                    </a>
+                </h5>
+                </div>
+                <div id="collapseTwo2" class="collapse" role="tabpanel" aria-labelledby="headingTwo">
+                    <div class="card-block">
+                        <ul class="list-unstyled">
+                            <li>
+                                <span>DAY1</span>
+                                <span>飞往墨尔本，开启游学之旅</span>
+                            </li>
+                            <li>
+                                <span>DAY2</span>
+                                <span>墨尔本艺术熏陶一日游</span>
+                            </li>
+                            <li>
+                                <span>DAY3</span>
+                                <span>学校考察之旅，前往精英中学和澳洲著名大学进行实地考察</span>
+                            </li>
+                            <li>
+                                <span>DAY4</span>
+                                <span>高尔夫之旅，体验在绿茵场上挥杆的爽快感觉</span>
+                            </li>
+                            <li>
+                                <span>DAY5</span>
+                                <span>商业投资VIP讲座体验，零距离无阻碍的了解澳洲的移民文化，投资项目以及投资注意点的知识普及</span>
+                            </li>
+                            <li>
+                                <span>DAY6</span>
+                                <span>置业投资考察之旅，前往墨尔本极大具有投资潜力的区域进行考察</span>
+                            </li>
+                            <li>
+                                <span>DAY7</span>
+                                <span>前往著名的雅拉河谷酒庄，体验酒香的魅力和澳洲的酒业文化</span>
+                            </li>
+                            <li>
+                                <span>DAY8</span>
+                                <span>大洋路一日游</span>
+                            </li>
+                            <li>
+                                <span>DAY9</span>
+                                <span>菲利普岛观看小企鹅，沿路经过巧克力工厂，考验孩子动手制作巧克力的能力</span>
+                            </li>
+                            <li>
+                                <span>DAY10</span>
+                                <span>墨尔本 — 悉尼， 参观悉尼著名景点</span>
+                            </li>
+                            <li>
+                                <span>DAY11</span>
+                                <span>蓝山一日游</span>
+                            </li>
+                            <li>
+                                <span>DAY12</span>
+                                <span>自由购物，返回中国</span>
+                            </li>
+                        </ul>	
+                    </div>
+                </div>
+            </div>                       
+        </div>
+        <footer>
+            <p>如有子女同行，可安排当地学校学习</p>
+            <p>提供线路定制服务，为企业、学校定制商业考察团、校园游学团线路，欢迎致电咨询</p>
+        </footer>
+    </section>
+    <section id="features">
+        <h4>游学特色项目</h4>
+        <div class="card">
+            <img src="/static/xhd/horse.jpg" alt="Card image">
+            <div class="card-block">
+                <h6 class="card-title">马术运动</h4>
+                <p class="card-text small">接触传统贵族运动，强身健体，提升沟通能力、抗压能力、学习能力。</p>         
+            </div>
+        </div>
+        <div class="card">
+            <img src="/static/xhd/tennis.jpg" alt="Card image">
+            <div class="card-block">
+                <h6 class="card-title">网球运动</h4>
+                <p class="card-text small">针对青少年网球爱好者配备强大的顾问和专业教练团队，亲身感受澳网的魅力。</p>         
+            </div>
+        </div>
+        <div class="card">
+            <img src="/static/xhd/golf.jpg" alt="Card image">
+            <div class="card-block">
+                <h6 class="card-title">高尔夫运动</h4>
+                <p class="card-text small">化身小小“CEO”，培养身体柔韧性和协调性，提升社交能力。</p>         
+            </div>
+        </div>
+    </section>
+    <section id="grid">
+    </section>
+    <section id="qa">
+        <h4><i class="fa fa-question-circle-o" style="color:#677077" aria-hidden="true"></i>游学常见问题与回答</h4>
+    </section>
+<script>
+    $('.carousel').carousel({
+  interval: 3000
+})
+</script>
+</body>
+</html>

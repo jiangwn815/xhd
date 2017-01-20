@@ -5,9 +5,14 @@ nav ul{ font-size: 0.9rem; }
     background-size: cover;
     margin-bottom: 1rem; 
 }
-#junmbotro-content{
-     margin-left: 40%;
+#frist-jumbotron .container{
+    display: flex;
+    justify-content: flex-end;
+}
+#junmbotro-content{   
      padding-top: 2rem;
+     margin-right: 0;
+     max-width: 15rem;
  }
  #registry{ margin-left: 30%; }
  .quote-header{ color:#677077; }
@@ -52,7 +57,10 @@ a.carousel-control{ opacity: 0; }
     height: 64px;
     transform: scale(0.75,0.75);
 }
-div.media>div.media{ max-width: 48%; }
+div.media>div.media{ 
+    margin-left: auto;
+    margin-right: auto;
+    width: 48%; }
 #advantage{ padding-bottom: 3rem; }
 #itinerary>h4,
 #itinerary-business>h4,
@@ -123,4 +131,7 @@ footer{
     background: url("/static/xhd/bg4.png") no-repeat center;
     background-size: cover;
     height: 15rem;
+}
+#qa .list-group li span:first-child{
+    color: #49b0e5;
 }

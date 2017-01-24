@@ -3,5 +3,5 @@ var xhd = async (ctx,next) => {
 };
 
 module.exports = {
-    'GET /xhd': xhd
+    'GET /': xhd
 };

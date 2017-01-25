@@ -2,8 +2,8 @@ const Koa = require('koa');
 // 创建一个Koa对象表示web app本身:
 const app = new Koa();
 const bodyParser = require("koa-bodyparser");//用来解析post请求的body
-const controller = require('./controller');
-const templating = require('./templating');
+const controller = require('./middlewares/controller');
+const templating = require('./middlewares/templating');
 const isProduction = process.env.NODE_ENV === 'production';
 const rest = require('./rest');
 const config = require('./config');
@@ -39,7 +39,7 @@ const mysqlConfig= {
 
 // 第二个middleware处理静态文件
 
-    let staticFiles = require('./static-files');
+    let staticFiles = require('./middlewares/static-files');
     app.use(staticFiles('/static/', __dirname + '/static'));
 
 /*
@@ -77,4 +77,4 @@ app.use(controller());
 //listen是对http.creatServer的封装
 //可在多个端口启动app如同时支持http https
 app.listen(process.env.PORT||4900);
-console.log('app started at port '+process.env.PORT);
+console.log('app started at port: '+process.env.PORT||4900);

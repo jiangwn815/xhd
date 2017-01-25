@@ -20,7 +20,9 @@ function addMapping(router, mapping) {
 }
 
 function addControllers(router) {
-    var files = fs.readdirSync(__dirname + '/controllers');
+    let controller_path =__dirname.substring(0,__dirname.length-11)
+    console.log(controller_path);
+    var files = fs.readdirSync(controller_path + '/controllers');
     //过滤出controllers文件夹下所有js文件
     var js_files = files.filter((f) => {
         return f.endsWith('.js');
@@ -28,7 +30,7 @@ function addControllers(router) {
     //将每个js文件require
     for (var f of js_files) {
         console.log(`process controller: ${f}...`);
-        let mapping = require(__dirname + '/controllers/' + f);
+        let mapping = require(controller_path + '/controllers/' + f);
         addMapping(router, mapping);
     }
 }

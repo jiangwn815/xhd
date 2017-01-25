@@ -7,6 +7,7 @@ const templating = require('./middlewares/templating');
 const isProduction = process.env.NODE_ENV === 'production';
 const rest = require('./rest');
 const config = require('./config');
+const Sequelize = require('sequelize');
 
 
 // 对于任何请求，app将调用该异步函数处理请求，用async标明，代表后面的函数里面有异步操作：

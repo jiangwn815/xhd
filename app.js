@@ -8,7 +8,11 @@ const isProduction = process.env.NODE_ENV === 'production';
 const rest = require('./rest');
 const config = require('./config');
 const Sequelize = require('sequelize');
-
+const session = require('koa-session-minimal');
+const MysqlStore = require('koa-mysql-session');
+const SequelizeStore = require('koa-generic-session-sequelize');
+const CSRF = require('koa-csrf').default;
+const mysql = require("mysql");
 
 // 对于任何请求，app将调用该异步函数处理请求，用async标明，代表后面的函数里面有异步操作：
 // 把很多async函数组成一个处理链
@@ -31,12 +35,20 @@ app.use(async (ctx, next) => {
 });
 
 const mysqlConfig= {
-        user: "root",
-        password: "mypassword",
-        database: "flask_db",
-        host: "localhost"
+        user: "xhd_test",
+        password: "xhdpass",
+        database: "xhd_user_test",
+        host:"pxedfsfeyqyo.mysql.sae.sina.com.cn",
+        port:10126
 }
+var connection = mysql.createConnection(mysqlConfig);
+connection.query("select * from Persons", function (err, rows, fields) {
+        if (err) throw err;
+        console.log("mysql content:"+rows);
+        connection.end();
 
+        
+    });
 
 // 第二个middleware处理静态文件
 

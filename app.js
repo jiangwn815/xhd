@@ -6,7 +6,7 @@ const controller = require('./middlewares/controller');
 const templating = require('./middlewares/templating');
 const isProduction = process.env.NODE_ENV === 'production';
 const rest = require('./rest');
-const config = require('./config');
+const config = require('./config-sae');
 const Sequelize = require('sequelize');
 const session = require('koa-session-minimal');
 const MysqlStore = require('koa-mysql-session');
@@ -34,13 +34,9 @@ app.use(async (ctx, next) => {
     ctx.response.set('X-Response-Time', `${execTime}ms`);
 });
 
-const mysqlConfig= {
-        user: "xhd_test",
-        password: "xhdpass",
-        database: "xhd_user_test",
-        host:"pxedfsfeyqyo.mysql.sae.sina.com.cn",
-        port:10126
-}
+
+/*
+
 var connection = mysql.createConnection(mysqlConfig);
 connection.query("select * from Persons", function (err, rows, fields) {
         if (err) throw err;
@@ -48,36 +44,36 @@ connection.query("select * from Persons", function (err, rows, fields) {
         connection.end();
 
         
-    });
+    });*/
 
 // 第二个middleware处理静态文件
 
     let staticFiles = require('./middlewares/static-files');
     app.use(staticFiles('/static/', __dirname + '/static'));
 
-/*
+
 app.keys = ['your-session-secret'];
 app.use(session({
-        store: new MysqlStore(mysqlConfig),
+        store: new MysqlStore(config),
         rolling: true,
         cookie: {
             maxage:30 * 60 * 1000
         }
-}));*/
+}));
 //addControllers(router);
 // 第三个middleware处理POST请求
 app.use(bodyParser());//必须在router之前注册bodyParser
-/*
+
 app.use(new CSRF({
   invalidSessionSecretMessage: 'Invalid session secret',
   invalidSessionSecretStatusCode: 403,
   invalidTokenMessage: 'Invalid CSRF token',
   invalidTokenStatusCode: 403
-}));*/
+}));
 
 app.use(templating('view', {
     noCache: !isProduction,
-    watch: isProduction
+    watch: !isProduction
 }));
 
 
@@ -91,3 +87,4 @@ app.use(controller());
 //可在多个端口启动app如同时支持http https
 app.listen(process.env.PORT||4900);
 console.log('app started at port: '+process.env.PORT||4900);
+console.log('app started at '+process.env.NODE_ENV+" mode");

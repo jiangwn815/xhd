@@ -8,11 +8,11 @@ function addMapping(router, mapping) {
         if (url.startsWith('GET ')) {
             var path = url.substring(4);
             router.get(path, mapping[url]);//绑定所有get方法的路径和处理函数
-            console.log(`register URL mapping: GET ${path}`);
+            //console.log(`register URL mapping: GET ${path}`);
         } else if (url.startsWith('POST ')) {
             var path = url.substring(5);
             router.post(path, mapping[url]);//绑定所有post方法的路径和处理函数
-            console.log(`register URL mapping: POST ${path}`);
+           // console.log(`register URL mapping: POST ${path}`);
         } else {
             console.log(`invalid URL: ${url}`);
         }
@@ -32,7 +32,7 @@ function addControllers(router) {
     });
     //将每个js文件require
     for (var f of js_files) {
-        console.log(`process controller: ${f}...`);
+        //console.log(`process controller: ${f}...`);
         let mapping = require(controller_path + '/controllers/' + f);
         addMapping(router, mapping);
     }

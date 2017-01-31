@@ -4,6 +4,7 @@ const APIError = require('../middlewares/rest').APIError;
 
 module.exports = {
     'GET /api/user': async (ctx, next) => {
+        console.log("API USER IN!!");
         ctx.rest({
             users: await userService.getUsers()
         });

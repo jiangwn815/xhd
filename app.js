@@ -35,12 +35,12 @@ app.use(async (ctx, next) => {
         start = new Date().getTime(),
         execTime;
         ctx.state.startTime = new Date();
-    console.log(`----Process ${ctx.request.method} ${ctx.request.url}...Start:${start}`);
-    console.log(`----Type:${ctx.request.type} Path:${ctx.request.path} Host:${ctx.request.host}`);
+   // console.log(`----Process ${ctx.request.method} ${ctx.request.url}...Start:${start}`);
+    //console.log(`----Type:${ctx.request.type} Path:${ctx.request.path} Host:${ctx.request.host}`);
         // 如果没有await next（）后续的middleware将不再执行，可以通过if 判断是否要继续执行
     await next();// await 表示紧跟后面的表达式需要等待结果
     execTime = new Date().getTime() - start;
-    console.log(`----End ${ctx.request.method} ${ctx.request.url}.COST:${execTime}ms`);
+   // console.log(`----End ${ctx.request.method} ${ctx.request.url}.COST:${execTime}ms`);
     ctx.response.set('X-Response-Time', `${execTime}ms`);
 });
 
@@ -61,7 +61,7 @@ connection.query("select * from users", function (err, rows, fields) {
     let staticFiles = require('./middlewares/static-files');
     app.use(staticFiles('/static/', __dirname + '/static'));
 
-
+/*
 app.keys = ['your-session-secret'];
 app.use(session({
         store: new MysqlStore(config),
@@ -69,7 +69,7 @@ app.use(session({
         cookie: {
             maxage:30 * 60 * 1000
         }
-}));
+}));*/
 //addControllers(router);
 // 第三个middleware处理POST请求
 app.use(bodyParser());//必须在router之前注册bodyParser

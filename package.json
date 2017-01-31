@@ -29,7 +29,8 @@
         "koa-session-minimal":"3.0.3",
         "koa-generic-session-sequelize":"1.0.9",
         "koa-mysql-session":"0.0.2",
-        "koa-csrf":"3.0.4"
+        "koa-csrf":"3.0.4",
+        "uuid":"3.0.1"
         
     }
 }

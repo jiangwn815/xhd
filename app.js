@@ -4,15 +4,25 @@ const app = new Koa();
 const bodyParser = require("koa-bodyparser");//用来解析post请求的body
 const controller = require('./middlewares/controller');
 const templating = require('./middlewares/templating');
-const isProduction = process.env.NODE_ENV === 'production';
-const rest = require('./rest');
-const config = require('./config-sae');
+const rest = require('./middlewares/rest');
+
 const Sequelize = require('sequelize');
 const session = require('koa-session-minimal');
 const MysqlStore = require('koa-mysql-session');
 const SequelizeStore = require('koa-generic-session-sequelize');
 const CSRF = require('koa-csrf').default;
 const mysql = require("mysql");
+
+const isProduction = process.env.NODE_ENV === 'production';
+const isSAE = process.env.SERVER_NAME === "SAE";
+var config;
+
+if(isSAE){
+    config = require('./config-sae');
+}else{
+    config = require('./config-local');
+}
+
 
 // 对于任何请求，app将调用该异步函数处理请求，用async标明，代表后面的函数里面有异步操作：
 // 把很多async函数组成一个处理链
@@ -78,7 +88,7 @@ app.use(templating('view', {
 
 
 // bind .rest() for ctx:
-//app.use(rest.restify());
+app.use(rest.restify());
 //app.use(router.routes());
 app.use(controller());
 

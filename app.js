@@ -45,16 +45,16 @@ app.use(async (ctx, next) => {
 });
 
 
-/*
 
-var connection = mysql.createConnection(mysqlConfig);
+
+var connection = mysql.createConnection(config);
 connection.query("select * from Persons", function (err, rows, fields) {
         if (err) throw err;
         console.log("mysql content:"+rows);
         connection.end();
 
         
-    });*/
+    });
 
 // 第二个middleware处理静态文件
 

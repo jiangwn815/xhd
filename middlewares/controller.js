@@ -25,6 +25,9 @@ function addControllers(router) {
     var files = fs.readdirSync(controller_path + '/controllers');
     //过滤出controllers文件夹下所有js文件
     var js_files = files.filter((f) => {
+        if(f === "user-service.js"){
+            return false;
+        }
         return f.endsWith('.js');
     });
     //将每个js文件require

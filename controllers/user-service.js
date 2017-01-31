@@ -4,8 +4,9 @@ let User = model.Users;
 
 module.exports = {
     getUsers: async () => {       
-        users = await User.findAll();
         console.log("get users function is runnning.......");
+        users = await User.findAll();
+        
         return users;
         /*(async () => {
             users = await User.findAll();

@@ -15,7 +15,7 @@ if(isSAE){
 }else{
     config = require('../config-local');
 }
-console.log("config paras:"+config.database+config.username+config.password);
+console.log("config paras:"+config.database+"/"+config.username+"/"+config.password);
 
 var sequelize = new Sequelize(config.database, config.username, config.password, {
     host: config.host,

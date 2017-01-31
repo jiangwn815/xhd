@@ -48,9 +48,9 @@ app.use(async (ctx, next) => {
 
 
 var connection = mysql.createConnection(config);
-connection.query("select * from Persons", function (err, rows, fields) {
+connection.query("select * from users", function (err, rows, fields) {
         if (err) throw err;
-        console.log("mysql content:"+rows);
+        console.log("MYSQL CONTENT:"+rows[0].passwd);
         connection.end();
 
         

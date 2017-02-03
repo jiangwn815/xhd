@@ -15,7 +15,7 @@ if(isSAE){
 }else{
     config = require('../config-local');
 }
-console.log("sequelize config paras:"+config.database+"/"+config.username+"/"+config.password);
+//console.log("sequelize config paras:"+config.database+"/"+config.username+"/"+config.password);
 //var sequelize = new Sequelize('mysql://xhd_test:xhdpass@pxedfsfeyqyo.mysql.sae.sina.com.cn:10126/xhd_user_test');
 
 var sequelize = new Sequelize(config.database, config.username, config.password, {

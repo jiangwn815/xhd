@@ -28,7 +28,7 @@ var sequelize = new Sequelize(config.database, config.username, config.password,
         idle: 10000
     }
 });
-sequelize.authenticate().then(function(errors) { console.log("sequelize err:"+errors) });
+//sequelize.authenticate().then(function(errors) { console.log("sequelize err:"+errors) });
 
 const ID_TYPE = Sequelize.STRING(64);
 

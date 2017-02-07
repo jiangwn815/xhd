@@ -10,36 +10,38 @@
     <link href="/static/css/bootstrap.css" rel="stylesheet">
     <link href="/static/css/font-awesome.css" rel="stylesheet">
     <style>
-        nav   { padding: 0.5rem; }
-        nav ul{ font-size: 0.9rem; }
+        #navitems a{
+            list-style: none;
+            padding: 0.5rem;
+            color: dimgrey;
+        }
     </style>    
     {% endblock %}
     {% block headjs %}
     <script src="/static/js/jquery-3.1.1.min.js"></script>
     <script src="/static/js/tether.min.js"></script>
-    <script src="/static/js/bootstrap4.js"></script>
+    <script src="/static/js/bootstrap.js"></script>
     {% endblock %}
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-light">
+    <header>    
+        <nav class="navbar navbar-light flex-row justify-content-between">
             <a class="navbar-brand" href="#">
-                <img src="/static/xhd/logo.png" height="23rem" alt="">
+                <img src="/static/xhd/logo.png" height="23" widt="69" alt="">
             </a>       
-            <ul class="nav navbar-nav float-xs-right">
+            <ul class="nav nav-item" id="navitems">
                 <li class="nav-item active"><a class="nav-link" href="#">培训</a></li>
                 <li class="nav-item active"><a class="nav-link" href="#">游学</a></li>
                 <li class="nav-item active"><a class="nav-link" href="#">留学</a></li>
                 <li class="nav-item dropdown active">
-                <a class="nav-link dropdown-toggle" href="#"
-                id="supportedContentDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">更多</a>
-                <div class="dropdown-menu" aria-labelledby="supportedContentDropdown" id="nav-dropdown" style="left:-50%;min-width: 1rem;">
-                    <a class="dropdown-item" href="#">移民</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">房产</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">动态</a>
-                </div>
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">更多</a>
+                    <div class="dropdown-menu" aria-labelledby="supportedContentDropdown" id="nav-dropdown">
+                        <a class="dropdown-item" href="#">移民</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">房产</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">动态</a>
+                    </div>
                 </li>
             </ul>
         </nav>

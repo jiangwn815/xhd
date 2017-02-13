@@ -22,12 +22,7 @@
 
 i{ margin-right: 1rem; }
 a.carousel-control{ opacity: 0; }
-.media.four-factors,
-.four-factors>div.media{
-    padding: 0;
-    margin-bottom: 1rem;
-}
-.media.four-factors{ margin-top: 0.75rem; }
+
 #factor1{
     background: url("/static/xhd/icon.png");
     background-position: 0 -28px;

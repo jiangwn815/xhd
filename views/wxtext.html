@@ -3,12 +3,13 @@
 <section>
     <form action="/wx" method="get" role="form">
         <div class="form-group row">
-            <input type="text" name="Token" />
+            <label for="Token">Enter your token here:</label><input type="text" name="Token" />
         </div>
         <input type="hidden" name="timestamp" value="123434908" />
         <input type="hidden" name="nonce" value="9025950bcd0d6cac594e5f426ceb8b68" />
         <input type="hidden" name="echostr" value="jwn6" />       
         <input type="hidden" name="_csrf" value={{ csrfToken }} />
+        <button type="submit" value="go">GO</button>
     </form>
 </section>
 {% endblock %}

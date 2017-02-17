@@ -30,7 +30,9 @@
         "koa-generic-session-sequelize":"1.0.9",
         "koa-mysql-session":"0.0.2",
         "koa-csrf":"3.0.4",
-        "uuid":"3.0.1"
+        "uuid":"3.0.1",
+        "xml2js":"0.4.17",
+        "crypto":"0.0.3"
         
     }
 }
